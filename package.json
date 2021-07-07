@@ -6,7 +6,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "tsc"
+    "postinstall": "npm install -g typescript"
   },
   "private": true,
   "dependencies": {
