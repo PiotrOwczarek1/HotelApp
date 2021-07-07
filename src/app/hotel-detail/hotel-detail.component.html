@@ -1,0 +1,16 @@
+<div *ngIf="hotel">
+    <h2>{{hotel.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hotel.id}}</div>
+    <div><span>name: </span>{{hotel.name}}</div>
+
+    <div>
+        <label for="hotel-name"> Hotel name: </label>
+        <input id="hotel-name" [(ngModel)]="hotel.name">      
+        <label for="hotel-address"> Hotel address: </label>
+        <input id="hotel-address" [(ngModel)]="hotel.address">        
+        <label for="hotel-city_id"> City Id:</label>
+        <input id="city_id" [(ngModel)]="hotel.city_id">        
+    </div>
+</div>
+<button (click)="goBack()">go back</button>
+

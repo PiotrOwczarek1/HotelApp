@@ -1,0 +1,22 @@
+<div *ngIf="city">
+    <h2>{{city.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{city.id}}</div>
+    <div><span>name: </span>{{city.name}}</div>
+    <div>
+        <label for="city-name"> City name: </label>
+        <input id="city-name" [(ngModel)]="city.name" />        
+    </div>
+
+</div>
+
+
+<ul >
+    <h2>Hotels:</h2>
+    <li *ngFor='let hotel of hotels'>
+        <a routerLink='/hotel-detail/{{hotel.id}}'> {{hotel.name}} </a>    
+        <button class="delete" title="delete hotel"  (click)="delete(hotel)"><h3>X</h3></button>
+    </li>
+</ul>
+
+
+<button (click)="goBack()">go back</button>
