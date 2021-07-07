@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  serverUrl: 'https://event-app12.herokuapp.com'
 };
