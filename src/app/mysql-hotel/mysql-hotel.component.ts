@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Hotel } from '../model/hotel';
 import { MysqlDataService } from '../mysql-services/mysql-data.service';
 import { HotelService } from '../services/hotel.service';
@@ -11,7 +11,7 @@ import { HotelService } from '../services/hotel.service';
 })
 export class MysqlHotelComponent implements OnInit {
 
-  mysql_hotels : Hotel[] = [];
+  mysql_hotels: Hotel[] = [];
 
   constructor(private mysqlDataService: MysqlDataService, private hotelService: HotelService) { }
 
@@ -19,11 +19,11 @@ export class MysqlHotelComponent implements OnInit {
     this.getMysqlHotels();
   }
 
-  
+
   private getMysqlHotels() {
     this.mysqlDataService.getHotels().then((response: any) => {
       console.log('Response', response);
-      this.mysql_hotels = response.map((hotel : any) => hotel);
+      this.mysql_hotels = response.map((hotel: any) => hotel);
     });
   }
 
@@ -41,7 +41,7 @@ export class MysqlHotelComponent implements OnInit {
     address_in = address_in.trim();
     city_id_in = city_id_in.trim();
     if (!name_in || !address_in || !city_id_in) {
-       return; 
+      return;
     }
 
     const hotel_to_add: Hotel = { name: name_in, address: address_in, city_id: parseInt(city_id_in) } as Hotel;

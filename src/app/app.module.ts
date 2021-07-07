@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { CityComponent } from './city/city.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { InMemoryDataService } from './services/in-memory-data.service';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { CityDetailComponent } from './city-detail/city-detail.component';
 import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';

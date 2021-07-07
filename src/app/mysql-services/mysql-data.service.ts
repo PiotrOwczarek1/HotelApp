@@ -4,7 +4,7 @@ import { OktaAuthService } from '@okta/okta-angular';
 import { environment } from '../../environments/environment';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import {Hotel} from '../model/hotel';
 
 @Injectable({
